@@ -1,0 +1,7 @@
+applications:
+- buildpack: python_buildpack
+  command: python app.py
+  disk_quota: 512MB
+  memory: 512MB
+  name: marketnlp
+  random-route: false

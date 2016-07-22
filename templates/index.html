@@ -1,0 +1,541 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Market NLP</title>
+        <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGwAAABsCAYAAACPZlfNAAAAAXNSR0IArs4c6QAABYtJREFUeAHtnVtsFFUYx7/d3ruWotUKVIkNaCw02YgJGBRTMd4CokUejD4QH4gxQcIDeHnBmPjkhSghUYLGe3ywPtAHNCo0QgkWwi2tXG2V1kIpLXTbLt1tS9dzlmzSJssZhv32zDk7/2km2znn7Pd9+/vt2Z2dmW0D9Obat4gCiwiLBQQSLflSViAQeN6Can1fYiJBFPQ9BcsAQBiEWUbAsnIxwyDMMgKWlYsZBmGWEbCsXMwwCLOMgGXlYoZBmGUELCsXMwzCLCNgWbmYYRBmGQHLysUMgzDLCFhWLmYYhFlGwLJyMcMgzDIClpWLGQZhlhGwrFzMMAizjIBl5WKGQZhlBCwrV1xbb96y59V1VFJQmLawQNrWa43x8XEaHo1fW+Oj1H8lSqf6eulEbw+dvNhLvcNDinvb0WWksAdm3UWhwiJ2gt2RAWo80UY7jrdSU8cZGrt6lT1HtgMaKSxbD7qqfDq99tAjyTUSG6FP9v1BH+3dTUPxeLZSssf17U5HeXEJbXr8aerY+A6tf7iOxFeu2OFmI6BvhaVgVoRCtHl5PTW8/AoV5xekmo299b2wlJn6+WFqWrOWKkpDqSYjbyFskpZFs++hL1e9NKnFvF+t3OmQOwzdkcgUmnnBABXm5Ys1j8qKisVadFPvS8tramn1goX09eEDU+KbsmGlsMbjbbT6x++UDOVORGXoFppXOYMerLqbVsyrpcWzqykYdH5R+fjZlcnd/8sjV5Q5vOh0rt6LqhhyJsQ3uC+ID8ry89aHYtf90W1bKLzlffr19EnH6HIP8oXasOM4LwbkrLB0MP+6cJ6e+eoz+vTP5nTdU9peDC+Ysm3Khq+ESehy5r3e2ECHu7uUDuqq59Id4iXVtMV3wqSACSHt3V2/KF3I97qayjuVY7zo9KUwCfq3M6coNjamZD6zrFzZ70Wnb4XFxseoK3JZyXzWtGnKfi86fStMwu6LRpXMZ5RBmBKQ7k75XqZa8gLmPZ/Nq0hFkLnvttJSZUT5Oc60xbfC5CGs6lsrlD56hgaV/V50+lbYkuo5VFygPp3SMwxhXjwp0+bcsGRp2vZU48TEBB09153aNObWlzNMHo1/6r4apYTmsx10MTqsHONFp5VH6zMBtWbhYtq6YpVjiJ/ajjmO8WKAL4QFxamWZffPT1678dicex05D4jTKj8cO+Q4zosBOSXs7bonktci5ovjgPIUye3ieo3wzKrk+TC5faPLGz83On6ovtFY3ONySth7Ty67qbPMk6Hu+edv+vzg/slNRv3uy52O6xk40HWW6r/94nrdRrTn1AzLhOju9tP03DfbKTo6mkmYrN/X98L6xQHgTb/vpG0t+5LnybJOPMMEvhXWOXCJvj9yiD7Yu4sGRkYyxKjv7r4RJi+Na+05Rwf/66SG1qO0v/NffZQZM+WUsI07d1BC/MTE144GYzHxJYcYDYq1vb/f8WQlI9OshsopYZubm7IKy4Tg2K03wYKLGiDMBSwThkKYCRZc1ABhLmCZMBTCTLDgogYIcwHLhKEQZoIFFzVAmAtYJgyFMBMsuKgBwlzAMmEohJlgwUUNEOYClglDIcwECy5qgDAXsEwYCmEmWHBRA4S5gGXCUAgzwYKLGow84yyvuyhR/GW19kt9Lh5ibg01UtjS7VtzizLjo8FLIiNMHaEgTAdlxhwQxghTRygI00GZMQeEMcLUEQrCdFBmzAFhjDB1hIIwHZQZc0AYI0wdoSBMB2XGHBDGCFNHKAjTQZkxB4QxwtQRCsJ0UGbMAWGMMHWEgjAdlBlzQBgjTB2hIEwHZcYcEMYIU0coCNNBmTEHhDHC1BEKwnRQZswBYYwwdYSCMB2UGXNAGCNMHaEgTAdlxhziUu1Ei8M/+WFMh1CZEUi0/A+j7hNSB5Wo2wAAAABJRU5ErkJggg==">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../static/css/main.css">
+        <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+        <script src="../static/js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Market NLP</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 centered-text">
+
+                <div class="col-xs-9 ">
+                    <h1>LATEST 8-K FILINGS</h1>
+                </div>
+
+                    <div class="col-xs-3">
+                        <p style="font-size:smaller">Feed Active</p>
+                    </div>
+                    <div class="col-xs-1">
+                        <div class="circle"></div>
+                    </div>
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div>
+                    <div class="row">
+                        <hr class="thicker-hr">
+                        <div class="col-xs-1"></div>
+                        <div class="col-xs-3">
+                            <div class='square-box'>
+                                <div class='square-content-img'><img class="center-block" src="../static/img/{{tiles[0]['logo']}}"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-8" style="height:25px">
+                            <p id="co-name"> {{tiles[0]['name']}} </p>
+                        </div>
+
+                        <div class="col-xs-4"></div>
+
+                        <div class="col-xs-8">
+                            <div id="co-price"> {{tiles[0]['price']}} </div>
+                        </div>
+
+                    </div>
+                    <div class="row centered-text recommendation-row">
+                        <div class="col-xs-1"></div>
+
+                        <div class="col-xs-7 verticalLine " id="small-vert-pad">
+                            <p id="recommendation-style"> RECOMMENDATION </p>
+                            <p id="timestamp-style">{{tiles[0]['date']}}</p>
+                        </div>
+
+                        <!--<span style="text-align: center;vertical-align: middle;"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></span>-->
+                        <div class="col-xs-3">
+                            <p id="prediction-font" style="color:{{tiles[0]['stock_color']}}"  class="text-center ">
+                                <i class="fa fa-arrow-{{tiles[0]['arrow']}}" aria-hidden="true"></i>
+                                &nbsp;{{tiles[0]['prediction']}}
+                            </p>
+                       </div>
+                    </div>
+                    <div class="row" >
+                        <div class="col-xs-1" ></div>
+                        <div class="col-xs-10"><hr class="smaller-margin-hr"></div>
+                        <div class="col-xs-1"></div>
+                    </div>
+                    <div class="row " id="co-name">
+                        <a href="{{tiles[0]['link']}}">
+                            <div class="col-xs-1"></div>
+                            <div style="margin-top:0px" class="col-xs-9">View 8-K Analysis</div>
+                            <div class="col-xs-1"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                        </a>
+                        <div class="col-xs-1"></div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <hr class="thicker-hr">
+                </div>
+
+                <div>
+                    <div class="row">
+                        <div class="col-xs-1"></div>
+                        <div class="col-xs-3">
+                            <div class='square-box'>
+                                <div class='square-content-img'><img class="center-block" src="../static/img/{{tiles[1]['logo']}}"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-8" style="height:25px">
+                            <p id="co-name"> {{tiles[1]['name']}} </p>
+                        </div>
+
+                        <div class="col-xs-4"></div>
+
+                        <div class="col-xs-8">
+                            <div id="co-price"> {{tiles[1]['price']}} </div>
+                        </div>
+
+                    </div>
+                    <div class="row centered-text recommendation-row">
+                        <div class="col-xs-1"></div>
+
+                        <div class="col-xs-7 verticalLine " id="small-vert-pad">
+                            <p id="recommendation-style"> RECOMMENDATION </p>
+                            <p id="timestamp-style">{{tiles[1]['date']}}</p>
+                        </div>
+
+                        <!--<span style="text-align: center;vertical-align: middle;"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></span>-->
+                        <div class="col-xs-3">
+                            <p id="prediction-font" style="color:{{tiles[1]['stock_color']}}"  class="text-center ">
+                                <i class="fa fa-arrow-{{tiles[1]['arrow']}}" aria-hidden="true"></i>
+                                &nbsp;{{tiles[1]['prediction']}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row" >
+                        <div class="col-xs-1" ></div>
+                        <div class="col-xs-10"><hr class="smaller-margin-hr"></div>
+                        <div class="col-xs-1"></div>
+                    </div>
+                    <div class="row " id="co-name">
+                        <a href="{{tiles[1]['link']}}">
+                            <div class="col-xs-1"></div>
+                            <div style="margin-top:0px" class="col-xs-9">View 8-K Analysis</div>
+                            <div class="col-xs-1"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                        </a>
+                        <div class="col-xs-1"></div>
+                    </div>
+                    <hr class="thicker-hr">
+
+                </div>
+
+
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <img src="../static/img/importance.png" id="importance-plot">
+                <hr class="thicker-hr">
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div>
+                    <div class="row">
+                        <div class="col-xs-1"></div>
+                        <div class="col-xs-3">
+                            <div class='square-box'>
+                                <div class='square-content-img'><img class="center-block" src="../static/img/{{tiles[2]['logo']}}"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-8" style="height:25px">
+                            <p id="co-name"> {{tiles[2]['name']}} </p>
+                        </div>
+
+                        <div class="col-xs-4"></div>
+
+                        <div class="col-xs-8">
+                            <div id="co-price"> {{tiles[2]['price']}} </div>
+                        </div>
+
+                    </div>
+                    <div class="row centered-text recommendation-row">
+                        <div class="col-xs-1"></div>
+
+                        <div class="col-xs-7 verticalLine " id="small-vert-pad">
+                            <p id="recommendation-style"> RECOMMENDATION </p>
+                            <p id="timestamp-style">{{tiles[2]['date']}}</p>
+                        </div>
+
+                        <!--<span style="text-align: center;vertical-align: middle;"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></span>-->
+                        <div class="col-xs-3">
+                            <p id="prediction-font" style="color:{{tiles[2]['stock_color']}}"  class="text-center ">
+                                <i class="fa fa-arrow-{{tiles[2]['arrow']}}" aria-hidden="true"></i>
+                                &nbsp;{{tiles[2]['prediction']}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row" >
+                        <div class="col-xs-1" ></div>
+                        <div class="col-xs-10"><hr class="smaller-margin-hr"></div>
+                        <div class="col-xs-1"></div>
+                    </div>
+                    <div class="row " id="co-name">
+                        <a href="{{tiles[2]['link']}}">
+                            <div class="col-xs-1"></div>
+                            <div style="margin-top:0px" class="col-xs-9">View 8-K Analysis</div>
+                            <div class="col-xs-1"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                        </a>
+                        <div class="col-xs-1"></div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <hr class="thicker-hr">
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <div>
+                    <div class="row">
+                        <div class="col-xs-1"></div>
+                        <div class="col-xs-3">
+                            <div class='square-box'>
+                                <div class='square-content-img'><img class="center-block" src="../static/img/{{tiles[3]['logo']}}"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-8" style="height:25px">
+                            <p id="co-name"> {{tiles[3]['name']}} </p>
+                        </div>
+
+                        <div class="col-xs-4"></div>
+
+                        <div class="col-xs-8">
+                            <div id="co-price"> {{tiles[3]['price']}} </div>
+                        </div>
+
+                    </div>
+                    <div class="row centered-text recommendation-row">
+                        <div class="col-xs-1"></div>
+
+                        <div class="col-xs-7 verticalLine " id="small-vert-pad">
+                            <p id="recommendation-style"> RECOMMENDATION </p>
+                            <p id="timestamp-style">{{tiles[3]['date']}}</p>
+                        </div>
+
+                        <!--<span style="text-align: center;vertical-align: middle;"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></span>-->
+                        <div class="col-xs-3">
+                            <p id="prediction-font" style="color:{{tiles[3]['stock_color']}}"  class="text-center ">
+                                <i class="fa fa-arrow-{{tiles[3]['arrow']}}" aria-hidden="true"></i>
+                                &nbsp;{{tiles[3]['prediction']}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row" >
+                        <div class="col-xs-1" ></div>
+                        <div class="col-xs-10"><hr class="smaller-margin-hr"></div>
+                        <div class="col-xs-1"></div>
+                    </div>
+                    <div class="row " id="co-name">
+                        <a href="{{tiles[3]['link']}}">
+                            <div class="col-xs-1"></div>
+                            <div style="margin-top:0px" class="col-xs-9">View 8-K Analysis</div>
+                            <div class="col-xs-1"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                        </a>
+                        <div class="col-xs-1"></div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <hr class="thicker-hr">
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div>
+                    <div class="row">
+                        <div class="col-xs-1"></div>
+                        <div class="col-xs-3">
+                            <div class='square-box'>
+                                <div class='square-content-img'><img class="center-block" src="../static/img/{{tiles[4]['logo']}}"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-8" style="height:25px">
+                            <p id="co-name"> {{tiles[4]['name']}} </p>
+                        </div>
+
+                        <div class="col-xs-4"></div>
+
+                        <div class="col-xs-8">
+                            <div id="co-price"> {{tiles[4]['price']}} </div>
+                        </div>
+
+                    </div>
+                    <div class="row centered-text recommendation-row">
+                        <div class="col-xs-1"></div>
+
+                        <div class="col-xs-7 verticalLine " id="small-vert-pad">
+                            <p id="recommendation-style"> RECOMMENDATION </p>
+                            <p id="timestamp-style">{{tiles[4]['date']}}</p>
+                        </div>
+
+                        <!--<span style="text-align: center;vertical-align: middle;"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></span>-->
+                        <div class="col-xs-3">
+                            <p id="prediction-font" style="color:{{tiles[4]['stock_color']}}"  class="text-center ">
+                                <i class="fa fa-arrow-{{tiles[4]['arrow']}}" aria-hidden="true"></i>
+                                &nbsp;{{tiles[4]['prediction']}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row" >
+                        <div class="col-xs-1" ></div>
+                        <div class="col-xs-10"><hr class="smaller-margin-hr"></div>
+                        <div class="col-xs-1"></div>
+                    </div>
+                    <div class="row " id="co-name">
+                        <a href="{{tiles[4]['link']}}">
+                            <div class="col-xs-1"></div>
+                            <div style="margin-top:0px" class="col-xs-9">View 8-K Analysis</div>
+                            <div class="col-xs-1"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                        </a>
+                        <div class="col-xs-1"></div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <hr class="thicker-hr">
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <div>
+                    <div class="row">
+                        <div class="col-xs-1"></div>
+                        <div class="col-xs-3">
+                            <div class='square-box'>
+                                <div class='square-content-img'><img class="center-block" src="../static/img/{{tiles[5]['logo']}}"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-8" style="height:25px">
+                            <p id="co-name"> {{tiles[5]['name']}} </p>
+                        </div>
+
+                        <div class="col-xs-4"></div>
+
+                        <div class="col-xs-8">
+                            <div id="co-price"> {{tiles[5]['price']}} </div>
+                        </div>
+
+                    </div>
+                    <div class="row centered-text recommendation-row">
+                        <div class="col-xs-1"></div>
+
+                        <div class="col-xs-7 verticalLine " id="small-vert-pad">
+                            <p id="recommendation-style"> RECOMMENDATION </p>
+                            <p id="timestamp-style">{{tiles[5]['date']}}</p>
+                        </div>
+
+                        <!--<span style="text-align: center;vertical-align: middle;"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></span>-->
+                        <div class="col-xs-3">
+                            <p id="prediction-font" style="color:{{tiles[5]['stock_color']}}"  class="text-center ">
+                                <i class="fa fa-arrow-{{tiles[5]['arrow']}}" aria-hidden="true"></i>
+                                &nbsp;{{tiles[5]['prediction']}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row" >
+                        <div class="col-xs-1" ></div>
+                        <div class="col-xs-10"><hr class="smaller-margin-hr"></div>
+                        <div class="col-xs-1"></div>
+                    </div>
+                    <div class="row " id="co-name">
+                        <a href="{{tiles[5]['link']}}">
+                            <div class="col-xs-1"></div>
+                            <div style="margin-top:0px" class="col-xs-9">View 8-K Analysis</div>
+                            <div class="col-xs-1"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                        </a>
+                        <div class="col-xs-1"></div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <hr class="thicker-hr">
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div>
+                    <div class="row">
+                        <div class="col-xs-1"></div>
+                        <div class="col-xs-3">
+                            <div class='square-box'>
+                                <div class='square-content-img'><img class="center-block" src="../static/img/{{tiles[6]['logo']}}"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-8" style="height:25px">
+                            <p id="co-name"> {{tiles[6]['name']}} </p>
+                        </div>
+
+                        <div class="col-xs-4"></div>
+
+                        <div class="col-xs-8">
+                            <div id="co-price"> {{tiles[6]['price']}} </div>
+                        </div>
+
+                    </div>
+                    <div class="row centered-text recommendation-row">
+                        <div class="col-xs-1"></div>
+
+                        <div class="col-xs-7 verticalLine " id="small-vert-pad">
+                            <p id="recommendation-style"> RECOMMENDATION </p>
+                            <p id="timestamp-style">{{tiles[6]['date']}}</p>
+                        </div>
+
+                        <!--<span style="text-align: center;vertical-align: middle;"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></span>-->
+                        <div class="col-xs-3">
+                            <p id="prediction-font" style="color:{{tiles[6]['stock_color']}}"  class="text-center ">
+                                <i class="fa fa-arrow-{{tiles[6]['arrow']}}" aria-hidden="true"></i>
+                                &nbsp;{{tiles[6]['prediction']}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row" >
+                        <div class="col-xs-1" ></div>
+                        <div class="col-xs-10"><hr class="smaller-margin-hr"></div>
+                        <div class="col-xs-1"></div>
+                    </div>
+                    <div class="row " id="co-name">
+                        <a href="{{tiles[6]['link']}}">
+                            <div class="col-xs-1"></div>
+                            <div style="margin-top:0px" class="col-xs-9">View 8-K Analysis</div>
+                            <div class="col-xs-1"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                        </a>
+                        <div class="col-xs-1"></div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <hr class="thicker-hr">
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <div>
+                    <div class="row">
+                        <div class="col-xs-1"></div>
+                        <div class="col-xs-3">
+                            <div class='square-box'>
+                                <div class='square-content-img'><img class="center-block" src="../static/img/{{tiles[7]['logo']}}"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-8" style="height:25px">
+                            <p id="co-name"> {{tiles[7]['name']}} </p>
+                        </div>
+
+                        <div class="col-xs-4"></div>
+
+                        <div class="col-xs-8">
+                            <div id="co-price"> {{tiles[7]['price']}} </div>
+                        </div>
+
+                    </div>
+                    <div class="row centered-text recommendation-row">
+                        <div class="col-xs-1"></div>
+
+                        <div class="col-xs-7 verticalLine " id="small-vert-pad">
+                            <p id="recommendation-style"> RECOMMENDATION </p>
+                            <p id="timestamp-style">{{tiles[7]['date']}}</p>
+                        </div>
+
+                        <!--<span style="text-align: center;vertical-align: middle;"><i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></span>-->
+                        <div class="col-xs-3">
+                            <p id="prediction-font" style="color:{{tiles[7]['stock_color']}}"  class="text-center ">
+                                <i class="fa fa-arrow-{{tiles[7]['arrow']}}" aria-hidden="true"></i>
+                                &nbsp;{{tiles[7]['prediction']}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row" >
+                        <div class="col-xs-1" ></div>
+                        <div class="col-xs-10"><hr class="smaller-margin-hr"></div>
+                        <div class="col-xs-1"></div>
+                    </div>
+                    <div class="row " id="co-name">
+                        <a href="{{tiles[7]['link']}}">
+                            <div class="col-xs-1"></div>
+                            <div style="margin-top:0px" class="col-xs-9">View 8-K Analysis</div>
+                            <div class="col-xs-1"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                        </a>
+                        <div class="col-xs-1"></div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <hr class="thicker-hr">
+                </div>
+            </div>
+
+        </div>
+
+
+      <footer>
+        <p>&copy; Pivotal 2016</p>
+      </footer>
+    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../static/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-76191007-2', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+        <script src="../static/js/vendor/bootstrap.min.js"></script>
+
+        <script src="../static/js/main.js"></script>
+    </body>
+</html>

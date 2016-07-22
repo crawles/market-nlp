@@ -1,0 +1,106 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.square-box{
+    width: 73px;
+    height: 73px;
+    border-style: solid;
+    border-color: dimgray;
+    border-width: 2px;
+
+}
+
+.square-content-img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.square-content-img img {
+    width:46px;
+}
+
+
+#co-name {
+    color: black;
+    font-size:20px;
+}
+
+#co-price {
+    color: black;
+    font-size:34px;
+    font-weight: bold;
+}
+
+#small-pad {
+    padding-left: 1px;
+}
+
+#recommendation-style {
+    color: black;
+    font-size:17px;
+    margin: 0 0 0px;
+}
+
+.recommendation-row {
+    margin-top: 6px;
+}
+
+#timestamp-style {
+    color: black;
+    font-size:17px;
+    font-weight:lighter;
+}
+
+.verticalLine {
+    border-right: solid black thin;
+}
+
+div.centered-text {
+    display: flex;
+    align-items: center;
+}
+
+div.centered-text p {
+    margin: 0 }
+
+#prediction-font {
+    font-weight:bold;
+    font-size:18px;
+}
+
+#importance-plot {
+    height: 423px;
+}
+
+.smaller-margin-hr {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.thicker-hr {
+    border-top: 2px solid #eee;
+}
+
+a {
+    color: black;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #417505;
+    /* width and height can be anything, as long as they're equal */
+}
+
+h1 {
+    font-size:27px;
+}
+
+
+
